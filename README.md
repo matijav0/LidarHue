@@ -2,6 +2,8 @@
 
 **Colorize uncolored LiDAR point clouds with orthophoto imagery.**
 
+![LidarHue processing workflow](docs/workflow.svg)
+
 LidarHue is a focused Windows batch utility for adding RGB values to LAS/LAZ
 point clouds that have no point colors. It requests matching orthophoto imagery
 from the Croatian State Geodetic Administration (DGU) WMS and uses PDAL to

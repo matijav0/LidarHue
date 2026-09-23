@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" role="img" aria-labelledby="title desc">
+  <title id="title">LidarHue processing workflow</title>
+  <desc id="desc">LAS or LAZ point cloud and DGU orthophoto imagery are combined by PDAL colorization to create an RGB LAZ point cloud.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#101b2d"/>
+      <stop offset="1" stop-color="#172b3d"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#54d6c8"/>
+      <stop offset="1" stop-color="#7be0a3"/>
+    </linearGradient>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 10 5 0 10Z" fill="#76cfc1"/>
+    </marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="8" stdDeviation="9" flood-color="#07111e" flood-opacity=".32"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="330" rx="24" fill="url(#bg)"/>
+  <circle cx="1070" cy="18" r="170" fill="#38a99c" opacity=".08"/>
+  <circle cx="35" cy="310" r="180" fill="#5985ce" opacity=".08"/>
+  <text x="48" y="54" fill="#f2f7fb" font-family="Segoe UI,Arial,sans-serif" font-size="25" font-weight="700">LidarHue · LiDAR colorization workflow</text>
+  <text x="48" y="81" fill="#aabac9" font-family="Segoe UI,Arial,sans-serif" font-size="14">Sample orthophoto RGB values at each point, then write a colorized LAZ.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="48" y="121" width="238" height="66" rx="14" fill="#22354a" stroke="#3d5368"/>
+    <rect x="48" y="121" width="5" height="66" rx="2" fill="#8aa8e8"/>
+    <text x="68" y="147" fill="#dce8f5" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1">POINT CLOUD</text>
+    <text x="68" y="172" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">LAS / LAZ · EPSG:3765</text>
+    <rect x="48" y="199" width="238" height="66" rx="14" fill="#22354a" stroke="#3d5368"/>
+    <rect x="48" y="199" width="5" height="66" rx="2" fill="#e5bd72"/>
+    <text x="68" y="225" fill="#f2dfbd" font-family="Segoe UI,Arial,sans-serif" font-size="11" font-weight="700" letter-spacing="1">IMAGERY</text>
+    <text x="68" y="250" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="17" font-weight="700">DGU orthophoto · WMS</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="363" y="121" width="270" height="142" rx="16" fill="#203b43" stroke="#38665f"/>
+    <rect x="363" y="121" width="5" height="142" rx="2" fill="url(#accent)"/>
+    <text x="387" y="155" fill="#bcebe0" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">PROCESS</text>
+    <text x="387" y="190" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700">LidarHue + PDAL</text>
+    <text x="387" y="219" fill="#c2d9d4" font-family="Segoe UI,Arial,sans-serif" font-size="15">DGU WMS orthophoto</text>
+    <text x="387" y="243" fill="#9db9b3" font-family="Segoe UI,Arial,sans-serif" font-size="13">Request · sample RGB · write LAZ</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="797" y="121" width="355" height="142" rx="16" fill="#263b36" stroke="#486f59"/>
+    <rect x="797" y="121" width="5" height="142" rx="2" fill="#7be0a3"/>
+    <text x="821" y="155" fill="#c5f0d2" font-family="Segoe UI,Arial,sans-serif" font-size="12" font-weight="700" letter-spacing="1.2">OUTPUT</text>
+    <text x="821" y="190" fill="#ffffff" font-family="Segoe UI,Arial,sans-serif" font-size="22" font-weight="700">RGB-colored point cloud</text>
+    <text x="821" y="219" fill="#d0dfd5" font-family="Segoe UI,Arial,sans-serif" font-size="15">LAZ with per-point color</text>
+    <text x="821" y="243" fill="#a9c1b1" font-family="Segoe UI,Arial,sans-serif" font-size="13">Optional watermark-avoiding variant</text>
+  </g>
+
+  <path d="M287 154H348" fill="none" stroke="#76cfc1" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M287 232C321 232 320 226 348 226" fill="none" stroke="#76cfc1" stroke-width="3" marker-end="url(#arrow)"/>
+  <path d="M634 192H782" fill="none" stroke="#76cfc1" stroke-width="3" marker-end="url(#arrow)"/>
+
+  <g transform="translate(299 178)">
+    <rect width="45" height="24" rx="12" fill="#284653" stroke="#47716e"/>
+    <text x="22.5" y="16" text-anchor="middle" fill="#c9e9df" font-family="Segoe UI,Arial,sans-serif" font-size="10" font-weight="700">SAMPLE</text>
+  </g>
+  <text x="48" y="307" fill="#8599ab" font-family="Segoe UI,Arial,sans-serif" font-size="12">Point colors are added; mesh texturing and reprojection are outside this tool's scope.</text>
+</svg>
