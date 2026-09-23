@@ -1,0 +1,41 @@
+{
+  "envRoot": "C:\\Users\\YOUR_NAME\\miniforge3\\envs\\lidar_color",
+  "crs": "EPSG:3765",
+  "wms": {
+    "base": "https://geoportal.dgu.hr/services/inspire/orthophoto_2023_2024/ows",
+    "layer": "OI.OrthoimageCoverage",
+    "version": "1.3.0",
+    "format": "image/geotiff",
+    "axisOrder": "xy",
+    "styles": ""
+  },
+  "resolution": 0.25,
+  "shiftFactor": 2.2,
+  "maxPixelsPerSide": 10000,
+  "retry": {
+    "count": 4,
+    "delaySeconds": 6
+  },
+  "output": {
+    "compression": "laszip",
+    "extension": ".laz",
+    "minorVersion": 4,
+    "dataformatId": 8,
+    "keepRasters": true
+  },
+  "paths": {
+    "processed": "inputi_obradjeni",
+    "outputs": "finali/laz",
+    "rasters": "backend/rasters/batch",
+    "pipelines": "backend/pipelines/batch",
+    "logs": "backend/logs",
+    "status": "backend/status"
+  },
+  "groups": [
+    {
+      "name": "Example",
+      "source": "Lidar data",
+      "moveWhenDone": false
+    }
+  ]
+}

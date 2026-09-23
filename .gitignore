@@ -1,0 +1,29 @@
+# Local configuration can contain workstation and network-share paths.
+/config.json
+
+# LiDAR source data and generated deliverables
+/Lidar data/
+/inputi/
+/inputi_obradjeni/
+/finali/
+*.las
+*.laz
+
+# Downloaded imagery and generated processing artifacts
+/backend/rasters/
+/backend/pipelines/
+/backend/logs/
+/backend/status/
+*.tif
+*.tiff
+*.part
+
+# Local environments, caches, and editor files
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
